@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Study Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="theme-btn" onclick="toggleTheme()">🌙 Toggle Theme</button>
+<div class="container">
+  <h1>📘 Smart Study Planner</h1>
+
+  <input type="text" id="title" placeholder="Task Title">
+  <textarea id="desc" placeholder="Task Description"></textarea>
+
+  <label for="subject">Select Subject:</label>
+  <select id="subject">
+    <option value="Math">Math</option>
+    <option value="Science">Science</option>
+    <option value="History">History</option>
+    <option value="English">English</option>
+  </select>
+
+  <label for="priority">Select Priority:</label>
+  <select id="priority">
+    <option value="High">High Priority</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+
+  <label for="deadline">Deadline:</label>
+  <input type="date" id="deadline">
+
+  <button onclick="addTask()">Add Task</button>
+
+  <h2>💪 Your Study Goals</h2>
+  <div id="tasks"></div>
+
+  <h3>🎯 Progress</h3>
+  <div class="progress-bar">
+    <div class="progress" id="progress"></div>
+  </div>
+  <p id="points">Points: 0</p>
+
+  <div class="quote" id="quote"></div>
+
+  <div class="archive">
+    <h3>📂 Completed Tasks</h3>
+    <div id="archive"></div>
+  </div>
+
+  <h3>🗓️ Visual Timeline</h3>
+  <div class="timeline" id="timeline"></div>
+
+  <h3 id="suggestion"></h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
